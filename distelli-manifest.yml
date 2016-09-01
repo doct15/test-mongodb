@@ -1,0 +1,22 @@
+bmcgehee/test-mongodb:
+  Build:
+    - echo "Processes"
+    - ps -auxwww --forest
+    
+    - echo "Starting mongodb"
+    - mongodb-runner start
+    
+    - echo "Processes"
+    - ps -auxwww --forest
+    
+    - echo "waiting 30 seconds"
+    - sleep 30
+    
+    - echo "Starting mongodb"
+    - mongodb-runner start
+    
+    - echo "Processes"
+    - ps -auxwww --forest
+    
+  PkgInclude:
+    - '*'
